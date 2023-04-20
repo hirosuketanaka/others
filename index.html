@@ -4,7 +4,7 @@
     <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
     <script src="https://unpkg.com/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
-
+    
     <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -50,7 +50,7 @@
         // GLTF形式のモデルデータを読み込む
         const loader = new THREE.GLTFLoader();
         // GLTFファイルのパスを指定
-        const objects = await loader.loadAsync('./models/gltf/binary/ToyCar.glb');
+        const objects = await loader.loadAsync('./ToyCar.glb');
         // 読み込み後に3D空間に追加
         const model = objects.scene;
         scene.add(model);
