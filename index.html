@@ -41,7 +41,7 @@
         const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
         directionalLight.position.set(1, 1, 1);
         scene.add(directionalLight);
-
+        //環境光を追加
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
         scene.add(ambientLight);
 
@@ -53,7 +53,7 @@
         const model = objects.scene;
         scene.add(model);
 
-        model.scale.set(10, 10, 10); // 大きさ30倍に拡大
+        model.scale.set(5, 5, 5);
 
         tick();
 
