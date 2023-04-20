@@ -22,14 +22,14 @@
         });
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(width, height);
-
+        b0c4de
         // シーンを作成
         const scene = new THREE.Scene();
-
+        scene.background = new THREE.Color(0xb0c4de);
         // カメラを作成
-        const camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 10000);
+        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
         // カメラの初期座標を設定
-        camera.position.set(1, 1, 1);
+        camera.position.set(1, 10, 1);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera, canvasElement);
