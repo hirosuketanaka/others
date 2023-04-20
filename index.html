@@ -38,14 +38,12 @@
 
         // 平行光源を作成
         // 上から照らす
-        //const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
-        //directionalLight.position.set(1, 1, 1);
-        //scene.add(directionalLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(1, 1, 1);
+        scene.add(directionalLight);
 
-        // 横からテラス
-        const directionalLight2 = new THREE.DirectionalLight(0xffffff,0.6);
-        directionalLight2.position.set(1, 1, 1);
-        scene.add(directionalLight2);
+        const ambientLight = new Three.AmbientLignt(0x333333);
+        scene.add(ambientLight);
 
         // GLTF形式のモデルデータを読み込む
         const loader = new THREE.GLTFLoader();
