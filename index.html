@@ -38,9 +38,9 @@
 
         // 平行光源を作成
         // 上から照らす
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
-        directionalLight.position.set(1, 1, 1);
-        scene.add(directionalLight);
+        //const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
+        //directionalLight.position.set(1, 1, 1);
+        //scene.add(directionalLight);
 
         // 横からテラス
         const directionalLight2 = new THREE.DirectionalLight(0xffffff,0.6);
@@ -55,7 +55,7 @@
         const model = objects.scene;
         scene.add(model);
 
-        model.scale.set(30, 30, 30); // 大きさ30倍に拡大
+        model.scale.set(10, 10, 10); // 大きさ30倍に拡大
 
         tick();
 
