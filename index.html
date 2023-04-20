@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang = "ja">
+<html>
   <head>
     <meta charset="utf-8" />
     <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
@@ -28,7 +27,7 @@
         const scene = new THREE.Scene();
 
         // カメラを作成
-        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
+        const camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 10000);
         // カメラの初期座標を設定
         camera.position.set(1, 1, 1);
 
@@ -51,12 +50,12 @@
         // GLTF形式のモデルデータを読み込む
         const loader = new THREE.GLTFLoader();
         // GLTFファイルのパスを指定
-        const gltf = await loader.loadAsync('./hyosatsutouskp.gltf');
+        const objects = await loader.loadAsync('./models/gltf/binary/ToyCar.glb');
         // 読み込み後に3D空間に追加
-        const model = gltf.scene;
+        const model = objects.scene;
         scene.add(model);
 
-        model.scale.set(30, 30, 30);
+        model.scale.set(30, 30, 30); // 大きさ30倍に拡大
 
         tick();
 
@@ -69,9 +68,7 @@
       }
     </script>
   </head>
-    <body>
-      <body>
-        <canvas id="myCanvas"></canvas>
-      </body>
-    </body>
+  <body>
+    <canvas id="myCanvas"></canvas>
+  </body>
 </html>
